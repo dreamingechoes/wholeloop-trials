@@ -1,0 +1,1 @@
+const fs=require('node:fs');require('node:http').createServer((_q,r)=>{r.setHeader('content-type','application/json');r.end(JSON.stringify({status:fs.readFileSync('/workspace/app/status.txt','utf8')}))}).listen(3000,'0.0.0.0')

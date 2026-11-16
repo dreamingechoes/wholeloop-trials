@@ -1,5 +1,5 @@
 name: check
-on: [push, pull_request]
+on: [pull_request]
 permissions:
   contents: read
 jobs:
@@ -11,3 +11,4 @@ jobs:
         with:
           node-version: 22
       - run: npm run check
+      - run: node ci-check.cjs
